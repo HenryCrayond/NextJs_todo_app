@@ -15,7 +15,7 @@ const TodoPage = () => {
       const updates = await updateSkills(newSkill)
       setTodos(updates as any)
       setNewSkill({ id: null, label: '' });
-    } else {
+    } else if(newSkill?.label?.trim()) {
       const newTodoItem = await createSkills(newSkill?.label);
       setTodos([...todos, newTodoItem]);
       setNewSkill({ label: '' });
@@ -57,8 +57,8 @@ const TodoPage = () => {
           </div>
         </div>
       </div>
-      <div className="w-full h-screen-1/2 overflow-y-auto">
-        <div className="w-full max-h-[280px] overflow-y-scroll">
+      <div className="w-full h-screen-1/2 overflow-y-auto no-scrollbar">
+        <div className="w-full max-h-[280px] overflow-y-scroll no-scrollbar">
           {
             todos?.length > 0 && todos?.map((list) => (
               <Listing
