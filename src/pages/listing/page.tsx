@@ -13,7 +13,7 @@ interface ListProps {
 const Listing = (props: ListProps) => {
     const { id, label ,handleEdit ,handleDelete} = props;
     return (
-        <div className='w-full flex justify-between text-center gap-12'>
+        <div className='w-full flex justify-between text-center gap-12 mb-4'>
             <div className='w-full bg-bg-card rounded-lg self-center p-3 pl-6 pr-6 text-left'>
                 <h3>{label}</h3>
             </div>

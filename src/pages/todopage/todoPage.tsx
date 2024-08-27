@@ -41,7 +41,7 @@ const TodoPage = () => {
 
   return (
     <>
-      <div className='bg-bg-card w-full justify-center text-center p-6 rounded-lg'>
+      <div className='bg-bg-card w-full justify-center text-center p-5 rounded-lg'>
         <p className='pb-10'><span className="font-bold text-white text-4xl">List out your  </span><span className="font-black text-title text-5xl">  skills</span></p>
         <div className="w-full justify-center border-b pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
           <h1 className="font-semibold text-white text-xl pb-4">Add Your Learned Skills</h1>
@@ -57,17 +57,22 @@ const TodoPage = () => {
           </div>
         </div>
       </div>
-      {
-        todos?.length > 0 && todos?.map((list) => (
-          <Listing
-            key={list?.id}
-            id={list?.id}
-            label={list?.label}
-            handleDelete={() => handleDeleteTodo(list?.id)}
-            handleEdit={() => handleEditTodo(list?.id)}
-          />
-        ))
-      }
+      <div className="w-full h-screen-1/2 overflow-y-auto">
+        <div className="w-full max-h-[280px] overflow-y-scroll">
+          {
+            todos?.length > 0 && todos?.map((list) => (
+              <Listing
+                key={list?.id}
+                id={list?.id}
+                label={list?.label}
+                handleDelete={() => handleDeleteTodo(list?.id)}
+                handleEdit={() => handleEditTodo(list?.id)}
+              />
+            ))
+          }
+        </div>
+      </div>
+
     </>
   )
 }
