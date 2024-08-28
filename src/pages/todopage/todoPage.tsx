@@ -72,7 +72,6 @@ const TodoPage = () => {
           }
         </div>
       </div>
-
     </>
   )
 }

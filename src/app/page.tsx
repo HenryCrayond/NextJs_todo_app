@@ -1,4 +1,3 @@
-import Listing from "@/pages/listing/page";
 import TodoPage from "@/pages/todopage/todoPage";
 
 export default function Home() {
