@@ -5,17 +5,19 @@ import { Input } from "@nextui-org/input";
 
 interface InputProps {
     handleChange?: (e: any) => void;
-    value: string
+    value?: string
+    name?: string
 }
 
 const InputFeild = (props: InputProps) => {
-    const { handleChange, value } = props;
+    const { handleChange, value ,name} = props;
 
     return (
         <Input
             label="Enter skill"
             size='sm'
             value={value}
+            name={name}
             onChange={handleChange}
             classNames={{
                 input: [

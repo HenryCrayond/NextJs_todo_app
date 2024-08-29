@@ -47,7 +47,7 @@ const TodoPage = () => {
           <h1 className="font-semibold text-white text-xl pb-4">Add Your Learned Skills</h1>
           <div className='w-full flex justify-between gap-10'>
             <div className='w-full'>
-              <InputFeild value={newSkill?.label} handleChange={(e) => setNewSkill((prev) => ({ ...prev, label: e?.target?.value }))} />
+              <InputFeild name='skill' value={newSkill?.label} handleChange={(e) => setNewSkill((prev) => ({ ...prev, label: e?.target?.value }))} />
             </div>
             <div className='w-2/6 text-right'>
               <Button onClick={handleAddTodo} disableRipple radius="full" className=" rounded-lg w-full h-full font-bold p-4 bg-gradient-to-r from-teal-600 to-blue-600">
