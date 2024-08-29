@@ -17,7 +17,7 @@ const Listing = (props: ListProps) => {
             <div className='w-full bg-bg-card rounded-lg self-center p-3 pl-6 pr-6 text-left'>
                 <h3>{label}</h3>
             </div>
-            <div className='w-2/6 text-right flex justify-between gap-6'>
+            <div className='w-2/6 text-right flex justify-between gap-5'>
                 <Button onClick={handleEdit} disableRipple radius="full" className=" rounded-lg w-1/2 h-full p-3 bg-gradient-to-r from-purple-400 to-purple-800">
                     Edit
                 </Button>
